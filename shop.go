@@ -27,9 +27,10 @@ type SpecialOffer struct {
 	Image        string      `json:"image" bson:"image"`
 	SecLeft      int         `json:"secLeft" bson:"-"`
 
-	Golds      int64                 `json:"golds" bson:"golds"`
-	Chips      int64                 `json:"chips" bson:"chips"`
-	OldAmount  int64                 `json:"oldAmount" bson:"oldAmount"`
+	Golds     int64 `json:"golds" bson:"golds"`
+	Chips     int64 `json:"chips" bson:"chips"`
+	OldAmount int64 `json:"oldAmount" bson:"oldAmount"`
+
 	Throwables []*ThrowableInventory `json:"throwables" bson:"throwables"`
 	Hats       []*StaticInventory    `json:"hats" bson:"hats"`
 	Avatars    []*StaticInventory    `json:"avatars" bson:"avatars"`
