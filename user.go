@@ -33,8 +33,9 @@ type User struct {
 	Warnings     int       `json:"warnings" bson:"warnings"`
 
 	// api v3 fileds
-	ImageUrl string `json:"imageUrl" bson:"imageUrl"`
-	Chips    int64  `json:"chips" bson:"chips"`
+	ImageUrl      string `json:"imageUrl" bson:"imageUrl"`
+	Chips         int64  `json:"chips" bson:"chips"`
+	RateClaimDone bool   `json:"rateClaimDone" bson:"rateClaimDone"`
 }
 
 func (u *User) AddV3Fields() {
