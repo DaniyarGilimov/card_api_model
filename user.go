@@ -33,10 +33,11 @@ type User struct {
 	Warnings     int       `json:"warnings" bson:"warnings"`
 
 	// api v3 fileds
-	ImageUrl        string `json:"imageUrl" bson:"imageUrl"`
-	Chips           int64  `json:"chips" bson:"chips"`
-	RateClaimDone   bool   `json:"rateClaimDone" bson:"rateClaimDone"`
-	PlinkoAvailable bool   `json:"plinkoAvailable" bson:"plinkoAvailable"`
+	ImageUrl         string `json:"imageUrl" bson:"imageUrl"`
+	Chips            int64  `json:"chips" bson:"chips"`
+	RateClaimDone    bool   `json:"rateClaimDone" bson:"rateClaimDone"`
+	PlinkoCount      int    `json:"plinkoCount" bson:"plinkoCount"`
+	MysteryCardCount int    `json:"mysteryCardCount" bson:"mysteryCardCount"`
 }
 
 func (u *User) AddV3Fields() {
@@ -69,6 +70,7 @@ type TimeData struct {
 	LastShopAdd        time.Time `json:"lastShopAdd" bson:"lastShopAdd"`
 	LastSpin           time.Time `json:"lastSpin" bson:"lastSpin"`
 	LastPlinko         time.Time `json:"lastPlinko" bson:"lastPlinko"`
+	LastMysteryCard    time.Time `json:"lastMysteryCard" bson:"lastMysteryCard"`
 }
 type Settings struct {
 	Version        int    `json:"version"`
