@@ -20,9 +20,19 @@ type SingleMessage struct {
 	MessageLanguage *Langauge `json:"-"`
 }
 
+type SingleMessageWithLang struct {
+	MessageID       int       `json:"messageId"`
+	Message         string    `json:"message"`
+	MessageLanguage *Langauge `json:"messageLanguage"`
+}
+
 type Langauge struct {
 	En string `json:"en"`
 	Ru string `json:"ru"`
+	Es string `json:"es"`
+	Pr string `json:"pr"`
+
+	It string `json:"it"`
 	Hi string `json:"hi"`
 }
 
