@@ -38,11 +38,14 @@ type User struct {
 	RateClaimDone    bool   `json:"rateClaimDone" bson:"rateClaimDone"`
 	PlinkoCount      int    `json:"plinkoCount" bson:"plinkoCount"`
 	MysteryCardCount int    `json:"mysteryCardCount" bson:"mysteryCardCount"`
+
+	PlinkoSecondsLeft int64 `json:"plinkoSecondsLeft" bson:"plinkoSecondsLeft"`
 }
 
 func (u *User) AddV3Fields() {
 	u.Chips = u.Inventory.Chips
 	u.ImageUrl = u.Inventory.Avatars[0].Image // Assuming the first hat is the active one
+
 }
 
 type SpinHistory struct {
